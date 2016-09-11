@@ -16,7 +16,7 @@ Efetue o [download](https://www.vagrantup.com/downloads.html) aqui, baixe e inst
 
 Efetue o teste para ver se ele está funcionando corretamente:
 
-Abra o console de vc estiver no GNU Linux/MAC ou cmd se estiver no Windows:
+Abra o console se vc estiver no GNU Linux/MAC ou cmd se estiver no Windows:
 ```
 $ vagrant
 ```
@@ -73,29 +73,30 @@ Uma box é uma imagem configurada, pronta para ser usada, ou não pode ser tamb�
 
 ### Baixando uma box
 
-Você ir no [vagrant cloud](https://atlas.hashicorp.com/boxes/search?utm_source=vagrantcloud.com&vagrantcloud=1) para escolher uma imagem.
+Você deverá ir no [vagrant cloud](https://atlas.hashicorp.com/boxes/search?utm_source=vagrantcloud.com&vagrantcloud=1) para escolher uma imagem.
 
-Ps. No momento que escrevi esse tutorial a versão atual do Ubuntu era 16.04 então aconselho fazer uso dessa imagem:
+> No momento que escrevi esse tutorial a versão atual do Ubuntu era 16.04 então aconselho fazer uso dessa imagem:
 
 ```
 ubuntu/trusty64
 ```
 
-### Instalando um box no vagrant
+### Instalando uma box no vagrant
 
 Existe duas formas para instalar uma imagem, a primeira é via vagrant cloud e a outra manualmente(Ps. A configuração manual irei fazer posteriormente...):
 
 #### Vagrant cloud
 
+Para adiconar a box
 ```
-vagrant box add ubuntu/trusty64
+$ vagrant box add ubuntu/trusty64
 ```  
 
 ### Visualizar imagens
 
-Para visualizar as imagens:
+Visualizar as imagens instaladas:
 ```
-vagrant box list
+$ vagrant box list
 ```
 
 Saída:
@@ -116,7 +117,7 @@ Vamos criar uma nova pasta para o nosso novo projeto, no meu ficou assim:
 
 Execute o comando abaixo dentro da pasta, para criar o arquivo de configuração
 ```
-vagrant init ubuntu/trusty64
+$ vagrant init ubuntu/trusty64
 ```
 
 Saída:
@@ -203,14 +204,14 @@ Vagrant.configure(2) do |config|
 end
 ```
 
-Ps. Sim o vagrant é feito em Ruby. =P
+> Sim o vagrant é feito em Ruby. =P
 
-Ele tem muitas configurações, mas iremos fazer a mais simples para ão complicar o tutorial
+Ele tem muitas configurações, mas iremos fazer a simples possível para ão complicar o tutorial
 
 ### Configurando o Vagrantfile
 
 Copie a linha, descomente e altere a para a porta que deseja liberar para ter acesso no seu sistema operacional.
-Ps. Aqui vc pode liberar portas que o seu Framework usa no meu caso o Django configuro para a porta 3000, também pode liberar as portas de outros aplicativos como Postgre, MongoDB..
+> Aqui vc pode liberar portas que o seu Framework usa no meu caso o Django configuro para a porta 3000, também pode liberar as portas de outros aplicativos como Postgre, MongoDB..
 
 ```
 # config.vm.network "forwarded_port", guest: 80, host: 8080
@@ -228,7 +229,7 @@ De acordo com a quantidade porta q você for precisando é só ir adiconando, ne
 
 Para inciar a VM ou melhor dar o boot:
 ```
-vagrant up
+$ vagrant up
 ```
 
 Como é a primeira vez que iniciamos a VM ela vai demorar um pouco para concluir isso é normal, das próximas vezes ela irá iniciar bem mais rápido.
@@ -282,10 +283,10 @@ Bringing machine 'default' up with 'virtualbox' provider...
 Para usar a sua VM se você estiver no GNU Linux/MAC é só abrir o console e digitar:
 
 ```
-vagrant ssh
+$ vagrant ssh
 ```
 
-Ps. Você pode usar no Windows o Git Bash seria o mesmo procemento acima.
+> Você pode usar no Windows o Git Bash seria o mesmo procemento acima.
 
 No windows você pode usar o [Putty](http://www.putty.org/), no endereço de ip você coloca
 ```
@@ -295,7 +296,7 @@ vagrant@localhost
 Porta padrão 2222
 
 Depois de executar o comando você receberá uma mensagem de boas vindas do Ubuntu
-Ps. Essa mensagem pode variar dependendo da distro q você escolheu
+> Essa mensagem pode variar dependendo da distro q você escolheu
 
 ```
 Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-93-generic x86_64)
@@ -322,7 +323,7 @@ New release '16.04.1 LTS' available.
 Run 'do-release-upgrade' to upgrade to it.
 ```
 
-Obs.: Se você quiser outros ambientes é só criar uma nova pasta, criar a VM, configurar, iniciar e usar. =)
+> Se você quiser outros ambientes é só criar uma nova pasta, criar a VM, configurar, iniciar e usar. =)
 
 ### Comandos do vagrant para administrar a suas VM's
 
