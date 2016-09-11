@@ -83,7 +83,8 @@ ubuntu/trusty64
 
 ### Instalando uma box no vagrant
 
-Existe duas formas para instalar uma imagem, a primeira é via vagrant cloud e a outra manualmente(Ps. A configuração manual irei fazer posteriormente...):
+Existe duas formas para instalar uma imagem, a primeira é via vagrant cloud e a outra manualmente:
+> Ps. A configuração manual irei fazer posteriormente...:
 
 #### Vagrant cloud
 
@@ -206,12 +207,12 @@ end
 
 > Sim o vagrant é feito em Ruby. =P
 
-Ele tem muitas configurações, mas iremos fazer a simples possível para ão complicar o tutorial
+Ele tem muitas configurações, mas iremos fazer a mais simples possível para ão complicar o tutorial
 
 ### Configurando o Vagrantfile
 
 Copie a linha, descomente e altere a para a porta que deseja liberar para ter acesso no seu sistema operacional.
-> Aqui vc pode liberar portas que o seu Framework usa no meu caso o Django configuro para a porta 3000, também pode liberar as portas de outros aplicativos como Postgre, MongoDB..
+> Aqui vc pode liberar portas que o seu Framework usa no meu caso o Django configuro para a porta 3000, também pode liberar as portas de outros aplicativos como Postgresql, MongoDB...
 
 ```
 # config.vm.network "forwarded_port", guest: 80, host: 8080
@@ -222,7 +223,7 @@ No meu caso ficaria assim
 config.vm.network "forwarded_port", guest: 3000, host: 3000
 ```
 
-De acordo com a quantidade porta q você for precisando é só ir adiconando, nesse momento só iremos fazer essa configuração.
+De acordo com a quantidade portas que você for precisando é só ir adiconando, nesse momento só iremos fazer essa configuração.
 
 
 ### Iniciando a VM
@@ -232,7 +233,7 @@ Para inciar a VM ou melhor dar o boot:
 $ vagrant up
 ```
 
-Como é a primeira vez que iniciamos a VM ela vai demorar um pouco para concluir isso é normal, das próximas vezes ela irá iniciar bem mais rápido.
+Como é a primeira vez que iniciamos a VM ela vai demorar um pouco para concluir, das próximas vezes ela irá iniciar bem mais rápido.
 
 Saída:
 ```
@@ -280,13 +281,13 @@ Bringing machine 'default' up with 'virtualbox' provider...
 
 ### Usando a sua nova VM
 
-Para usar a sua VM se você estiver no GNU Linux/MAC é só abrir o console e digitar:
+Para usar a VM se você estiver no GNU Linux/MAC é só abrir o console e digitar:
 
 ```
 $ vagrant ssh
 ```
 
-> Você pode usar no Windows o Git Bash seria o mesmo procemento acima.
+> Você pode usar no Windows o Git Bash seria o mesmo procedimento acima.
 
 No windows você pode usar o [Putty](http://www.putty.org/), no endereço de ip você coloca
 ```
@@ -379,7 +380,7 @@ $ vagrant help
 ### Obervações:
 Sempre quando vou iniciar o servidor web de desenvolvimento, configuro o host para 0.0.0.0:3000 sem isso provavelmente você não terá acesso a sua aplicação.
 
-Chegamos ao final desse tutorial, existe muitas configurações que você pode fazer no vagrant, meu foco foi fazer a configuração mais simples possível para que você não tenha problemas com eu tive no começo.
+Chegamos ao final desse tutorial, existe muitas configurações que você pode fazer no vagrant, meu foco foi fazer a configuração mais simples possível para que você não tenha problemas como eu tive no começo.
 
 Abraços. Qualquer dúvida estarei no grupo de Python Brasil e no meu e-mail: [miqueiaspenha@gmail.com](mailto:https://www.vagrantup.com/docs/getting-started/)
 
