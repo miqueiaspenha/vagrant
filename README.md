@@ -6,7 +6,7 @@ O vagrant é uma ferramenta usada para criar ambientes virtuais de uma forma fá
 
 ### Porque usar o vagrant?
 
-Se você já usou o Virtual Box ou qualquer outro programa de vistualização, sabe como é chato ficar copiando VM's... depois configurar rede e outras coisas, sem falar o espaço em disco que é consumido... que no vagrant isso se resume em alterar um arquivo e pronto sua VM já está pronta.
+Se você já usou o Virtual Box ou qualquer outro programa de virtualização, sabe como é chato ficar copiando VM's... depois configurar rede e outras coisas, sem falar o espaço em disco que é consumido... que no vagrant isso se resume em alterar um arquivo e pronto sua VM já está pronta.
 
 Agora vamos por a mão no teclado. =D
 
@@ -62,7 +62,7 @@ or not commonly used. To see all subcommands, run the command
 
 ### Local de trabalho
 
-Eu recomendo fortemente que vc tenha um local para colocar seus projetos, os meus sempre ficam em:
+Eu recomendo fortemente que você tenha um local para colocar seus projetos, os meus sempre ficam em:
 ```
 /home/miqueias/projetos/
 ```
@@ -75,7 +75,7 @@ Uma box é uma imagem configurada, pronta para ser usada, ou não pode ser tamb�
 
 Você ir no [vagrant cloud](https://atlas.hashicorp.com/boxes/search?utm_source=vagrantcloud.com&vagrantcloud=1) para escolher uma imagem.
 
-Ps. No momento que escrevi esse tutorial a versão atual do ubuntu era 16.04 então aconselho fazer uso dessa imagem:
+Ps. No momento que escrevi esse tutorial a versão atual do Ubuntu era 16.04 então aconselho fazer uso dessa imagem:
 
 ```
 ubuntu/trusty64
@@ -93,7 +93,7 @@ vagrant box add ubuntu/trusty64
 
 ### Visualizar imagens
 
-Para visulizar as imagens:
+Para visualizar as imagens:
 ```
 vagrant box list
 ```
@@ -324,7 +324,7 @@ Run 'do-release-upgrade' to upgrade to it.
 
 Obs.: Se você quiser outros ambientes é só criar uma nova pasta, criar a VM, configurar, iniciar e usar. =)
 
-### Comandos do vagrant para adiministrar a suas VM's
+### Comandos do vagrant para administrar a suas VM's
 
 Criar
 ```
@@ -380,7 +380,7 @@ Sempre quando vou iniciar o servidor web de desenvolvimento, configuro o host pa
 
 Chegamos ao final desse tutorial, existe muitas configurações que você pode fazer no vagrant, meu foco foi fazer a configuração mais simples possível para que você não tenha problemas com eu tive no começo.
 
-Abraços. Qualquer dúvida estarei no grupo de Python Brasil e no meu email: [miqueiaspenha@gmail.com](mailto:https://www.vagrantup.com/docs/getting-started/)
+Abraços. Qualquer dúvida estarei no grupo de Python Brasil e no meu e-mail: [miqueiaspenha@gmail.com](mailto:https://www.vagrantup.com/docs/getting-started/)
 
 ### Referencias
 
