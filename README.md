@@ -380,6 +380,21 @@ $ vagrant help
 ### Obervações:
 Sempre quando vou iniciar o servidor web de desenvolvimento, configuro o host para 0.0.0.0:3000 sem isso provavelmente você não terá acesso a sua aplicação.
 
+Caso você precise usar links simbólicos, utilize a configuração abaixo no seu Vagrantfile:
+```
+config.vm.provider "virtualbox" do |vb|
+vb.customize [
+    'setextradata', :id,
+    'VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root', '1'
+]
+end
+```
+
+Para criar utilizar virtualenv do Python adicione o parâmetro:
+```
+virtualenv env --always-copy
+```
+
 Chegamos ao final desse tutorial, existe muitas configurações que você pode fazer no vagrant, meu foco foi fazer a configuração mais simples possível para que você não tenha problemas como eu tive no começo.
 
 Abraços. Qualquer dúvida estarei no grupo de Python Brasil e no meu e-mail: [miqueiaspenha@gmail.com](mailto:https://www.vagrantup.com/docs/getting-started/)
